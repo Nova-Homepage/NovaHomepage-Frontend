@@ -2,31 +2,91 @@
   <body>
     <nav class="nav">
       <div class="nav__logo">
-        <router-link to="/">NOVA</router-link>
+        <router-link to="/" class="nav__logo_text">NOVA</router-link>
       </div>
 
       <div class="nav__menu">
-            <router-link to="/home">
+            <router-link to="/home" class="disableLink">
                 Documents
             </router-link>
-            <router-link to="/MainBoard">
+            <router-link to="/MainBoard" class="disableLink">
                 Members
             </router-link>
-            <router-link to="/Politician">
+            <router-link to="/Politician" class="disableLink">
                 Communication
             </router-link>
-            <router-link to="/Mypage">
+            <router-link to="/Mypage" class="disableLink">
                 Play
             </router-link>
-        </div>
+      </div>
 
-      <div class="nav__signIn"><p>Sign in</p></div>
-      <div class="nav__signUp"><p>Sign up</p></div>
+      <!-- 로그인시 바뀌어야하는부분 -->
+      <div class="nav__sign">
+        <div class="nav__signUp"><p>Sign up</p></div>
+        <div class="nav__signIn"><p>Sign in</p></div>
+      </div>
     </nav>
+    <hr/>
   </body>
 </template>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik+Mono+One&display=swap");
+
+.nav{
+  display : flex;
+  justify-content: center;
+}
+.nav__sign{
+  display :flex;
+  align-items: center;
+}
+
+.nav__menu{
+  display : flex;
+  align-items: center;
+}
+
+.nav__logo_text{
+width: 124px;
+height: 54px;
+left: 120px;
+top: 32px;
+margin-right : 100px;
+
+font-family: 'Rubik One';
+font-style: normal;
+font-weight: 1000;
+font-size: 32px;
+line-height: 20px;
+padding : 10px;
+
+display: flex;
+align-items: center;
+font-feature-settings: 'pnum' on, 'lnum' on;
+color: #252525;
+}
+
+.disableLink{
+  font-size: 20px;
+  color : #666666;
+  padding : 25px;
+  padding-right : 30px;
+}
+
+.nav__signUp{
+  font-size: 20px;
+  padding : 25px;
+}
+.nav__signIn{
+  font-size: 20px;
+  width: 100px;
+  height: 40px;
+  border: 2px solid #5D5D5D;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

@@ -134,3 +134,9 @@ BDO[DIR="rtl"] {
     page-break-before: avoid;
   }
 }
+
+hr{ // 구분선
+  width: 80%;
+  border: 2px solid #BBBBBB;
+  border-radius : 2px;
+}
