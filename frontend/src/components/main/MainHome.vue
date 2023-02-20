@@ -1,6 +1,13 @@
 <template>
-    <div class="typing">
-      {{displayText()}}
+    <div class="mainhome">
+      <div>NOVA software club</div>
+      <div class="typing">
+        {{displayText()}}
+      </div>
+      <img src="@/components/test_image.png" alt="">
+      <img :src="image1" alt=""/>
+      <img :src="image2" alt=""/>
+      <img :src="image3" alt=""/>
     </div>
 </template>
 
@@ -10,8 +17,11 @@ export default {
     },
     data() {
       return {
-        textdata : "IMAGE PROCESSING Algorithm, Application DevOps, Cloud ",
+        textdata : "IMAGE PROCESSING\nAlgorithm, Application\nDevOps, Cloud",
         index: 0,
+        image1 : require("@/components/test_image.png"),
+        image2 : require("@/components/test_image.png"),
+        image3 : require("@/components/test_image.png"),
       };
     },
     compueted: {
@@ -40,6 +50,11 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik+Mono+One&display=swap");
 
 .typing {
-  
-} 
+  white-space: pre-wrap;
+  font-size: 64px;
+  color: #2493bf;
+}
+.mainhome{
+  background-image: url(@/components/test_image.png);
+}
 </style>
