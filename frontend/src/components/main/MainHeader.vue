@@ -20,15 +20,37 @@
             </router-link>
       </div>
 
-      <!-- 로그인시 바뀌어야하는부분 -->
       <div class="nav__sign">
-        <div class="nav__signUp"><p>Sign up</p></div>
-        <div class="nav__signIn"><p>Sign in</p></div>
+        <!-- 로그인 안할경우 -->
+        <div v-if=!login class="nav__signUp"><p>Sign up</p></div>
+        <div v-if=!login class="nav__signIn"><p>Sign in</p></div>
+        <!-- 로그인 할경우 -->
+        <div v-if=login class="nav__user">{{username}} 회원님</div>
       </div>
     </nav>
     <hr/>
   </body>
 </template>
+
+<script>
+export default {
+    componets: {
+    },
+    data() {
+      return {
+        login : true,
+        username : "아무개",
+      };
+    },
+    compueted: {
+
+    },
+    methods: {
+
+    },
+  }
+</script>
+
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
@@ -84,6 +106,18 @@ color: #252525;
   width: 100px;
   height: 40px;
   border: 2px solid #5D5D5D;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__user{
+  color: #1B57A6;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  border: 2px solid #1B57A6;
   border-radius: 6px;
   display: flex;
   align-items: center;
