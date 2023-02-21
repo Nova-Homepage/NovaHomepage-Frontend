@@ -3,7 +3,7 @@
     <div class="wrap">
       <MainHeader />
       <!-- 본문내용 들어갈부분 -->
-      <MainHome />
+      <router-view />
       <!-- 본문내용 들어갈부분 -->
       <MainFooter />
     </div>

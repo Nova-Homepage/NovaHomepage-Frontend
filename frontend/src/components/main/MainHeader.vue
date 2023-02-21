@@ -2,30 +2,36 @@
   <body>
     <nav class="nav">
       <div class="nav__logo">
-        <router-link to="/" class="nav__logo_text">NOVA</router-link>
+        <router-link to="/home" class="nav__logo_text">NOVA</router-link>
       </div>
 
       <div class="nav__menu">
-            <router-link to="/home" class="disableLink">
+            <router-link to="/Documents" class="disableLink">
                 Documents
             </router-link>
-            <router-link to="/MainBoard" class="disableLink">
+            <router-link to="/Members" class="disableLink">
                 Members
             </router-link>
-            <router-link to="/Politician" class="disableLink">
-                Communication
+            <router-link to="/Communication" class="disableLink">
+              Communication
             </router-link>
-            <router-link to="/Mypage" class="disableLink">
+            <router-link to="/Play" class="disableLink">
                 Play
             </router-link>
       </div>
 
       <div class="nav__sign">
         <!-- 로그인 안할경우 -->
-        <div v-if=!login class="nav__signUp"><p>Sign up</p></div>
-        <div v-if=!login class="nav__signIn"><p>Sign in</p></div>
+        <div v-if=!login class="nav__signUp">
+          <router-link to="/SigninPage">SignUp</router-link>
+        </div>
+        <div v-if=!login class="nav__signIn">
+          <router-link to="/SigninPage">SignIn</router-link>
+        </div>
         <!-- 로그인 할경우 -->
-        <div v-if=login class="nav__user">{{username}} 회원님</div>
+        <div v-if=login class="nav__user">
+          <router-link to="/MyPage">{{username}} 회원님</router-link>
+        </div>
       </div>
     </nav>
     <hr/>
@@ -100,6 +106,9 @@ color: #252525;
 .nav__signUp{
   font-size: 20px;
   padding : 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav__signIn{
   font-size: 20px;
