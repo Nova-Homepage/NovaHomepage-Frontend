@@ -1,5 +1,5 @@
 <template>
-  <body>
+  <body class="body">
     <nav class="nav">
       <div class="nav__logo">
         <router-link to="/home" class="nav__logo_text">NOVA</router-link>
@@ -61,6 +61,9 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik+Mono+One&display=swap");
+.body{
+  position: relative;
+}
 
 .nav{
   display : flex;
