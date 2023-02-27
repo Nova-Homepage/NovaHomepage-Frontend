@@ -1,46 +1,59 @@
 <template>
-    <MainHomePage1 />
-    <MainHomePage2 />
-    <MainHomePage3 />
+    <div class="mainhome">
+      <div class="text1">NOVA software club</div>
+      <div class="typing">
+        {{displayText()}}
+      </div>
+      <img class="logo" src="@/components/test_image.png" alt="">
+      <img class="vector_1" src="@/assets/mainpage_home/Vector_1.png" alt="">
+      <img class="vector_2" src="@/assets/mainpage_home/Vector_2.png" alt="">
+      <img class="vector_3" src="@/assets/mainpage_home/Vector_3.png" alt="">
+      <img class="portal_1" src="@/assets/mainpage_home/Portal.png" alt="">
+      <img class="portal_2" src="@/assets/mainpage_home/Portal.png" alt="">
+      <img class="image1" :src="image1" alt=""/>
+      <img class="image2" :src="image2" alt=""/>
+      <img class="image3" :src="image3" alt=""/>
+      <hr class="line_1">
+      <hr class="line_2">
+      <hr class="line_3">
+      <div class="point_1"/>
+      <div class="point_2"/>
+      <div class="point_3"/>
+    </div>
 </template>
 
 <script>
-import MainHomePage1 from "@/components/main/MainHomeComponent/MainHomePage1.vue";
-import MainHomePage2 from "@/components/main/MainHomeComponent/MainHomePage2.vue";
-import MainHomePage3 from "@/components/main/MainHomeComponent/MainHomePage3.vue";
-
 export default {
-    components: {
-        MainHomePage1: MainHomePage1,
-        MainHomePage2: MainHomePage2,
-        MainHomePage3: MainHomePage3,
+    componets: {
     },
     data() {
-        return {
-            textdata: "IMAGE PROCESSING\nAlgorithm, Application\nDevOps, Cloud",
-            index: 0,
-            image1: require("@/assets/mainpage_home/imgtest1.png"),
-            image2: require("@/assets/mainpage_home/imgtest2.png"),
-            image3: require("@/assets/mainpage_home/imgtest3.png"),
-        };
+      return {
+        textdata : "IMAGE PROCESSING\nAlgorithm, Application\nDevOps, Cloud",
+        index: 0,
+        image1 : require("@/assets/mainpage_home/imgtest1.png"),
+        image2 : require("@/assets/mainpage_home/imgtest2.png"),
+        image3 : require("@/assets/mainpage_home/imgtest3.png"),
+      };
     },
-    compueted: {},
+    compueted: {
+    },
     methods: {
-        displayText() {
-            return this.textdata.substring(0, this.index);
-        },
-        typing() {
-            this.index++;
-            if (this.index >= this.textdata.length) {
-                return 0;
-            }
-            setTimeout(this.typing, 100);
-        },
+      displayText(){
+        return this.textdata.substring(0, this.index);
+      },
+
+      typing(){
+        this.index ++;
+        if(this.index >=this.textdata.length){
+          return 0;
+        }
+        setTimeout(this.typing, 100);
+      },
     },
-    mounted() {
-        this.typing();
+    mounted(){
+      this.typing();
     },
-}
+  }
 </script>
 
 <style>

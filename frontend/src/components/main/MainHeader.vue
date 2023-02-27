@@ -1,5 +1,5 @@
 <template>
-  <body class="body">
+  <div class="body">
     <nav class="nav">
       <div class="nav__logo">
         <router-link to="/home" class="nav__logo_text">NOVA</router-link>
@@ -35,7 +35,7 @@
       </div>
     </nav>
     <hr/>
-  </body>
+  </div>
 </template>
 
 <script>
@@ -67,11 +67,13 @@ export default {
 
 .nav{
   display : flex;
-  justify-content: center;
+  position: relative;
+  left: 150px;
 }
 .nav__sign{
-  display :flex;
+  display : flex;
   align-items: center;
+  padding-left: 5px;
 }
 
 .nav__menu{
@@ -80,30 +82,28 @@ export default {
 }
 
 .nav__logo_text{
-width: 124px;
-height: 54px;
-left: 120px;
-top: 32px;
-margin-right : 100px;
+  position: relative;
+  left: 0px;
+  top: 28px;
+  font-family: 'Rubik One';
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 32px;
+  line-height: 20px;
+  padding-right : 100px;
 
-font-family: 'Rubik One';
-font-style: normal;
-font-weight: 1000;
-font-size: 32px;
-line-height: 20px;
-padding : 10px;
-
-display: flex;
-align-items: center;
-font-feature-settings: 'pnum' on, 'lnum' on;
-color: #252525;
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #252525;
 }
 
 .disableLink{
   font-size: 20px;
   color : #666666;
   padding : 25px;
-  padding-right : 30px;
+  padding-right : 50px;
+  padding-left : 50px;
 }
 
 .nav__signUp{
@@ -134,5 +134,6 @@ color: #252525;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 100px;
 }
 </style>
