@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from '../views/main/MainPage.vue'
 import SigninPage from '../views/signin/SigninPage.vue'
+import GithubLogin from '../components/login/GithubLogin.vue';
 
 // component of MainPage
 import MainHome from '../components/main/MainHome.vue'
 import Documents from '../components/main/Documents.vue'
-import Members from '../components/main/Members.vue'
+import Members from '../views/member/MemberPage.vue'
 import Communication from '../components/main/Communication.vue'
 import Play from '../components/main/Play.vue'
 import MyPage from '../components/main/MyPage.vue'
@@ -29,6 +30,11 @@ const routes = [
     path: '/SigninPage',
     name: 'SigninPage',
     component: SigninPage
+  },
+  {
+    path: '/githublogin',
+    name: 'githublogin',
+    component: GithubLogin
   }
 ]
 
