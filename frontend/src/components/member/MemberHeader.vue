@@ -53,7 +53,7 @@ export default {};
   margin: 10px;
   width: 100px;
   height: 30px;
-  background: #2493bf;
+  background: #18617e;
   border-radius: 15px;
   border: 1px solid #343434;
 }
