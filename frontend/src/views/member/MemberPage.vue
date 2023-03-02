@@ -19,7 +19,7 @@ export default {
 
 <style>
 .wrap{
-    background-image: url(@/assets/icon/background1.png);
+    background-image: url(@/assets/icon/background1.svg);
     background-repeat:no-repeat;
     background-position:center center;
     background-attachment:fixed;

@@ -4,7 +4,7 @@
     <div class="rectangle"></div>
     <div class="year-wrap">
     <!--나중에 반복으로 처리-->
-      <div class="year"><p>2023</p></div>
+      <div class="year"><p>2022</p></div>
       <div class="year"><p>2023</p></div>
     </div>
   </div>
