@@ -1,5 +1,5 @@
 <template>
-  <body>
+  <div class="member-list-wrap">
     <div
       class="member-card"
       v-for="member in memberData"
@@ -30,7 +30,7 @@
         <li v-if="member.blog === 'null'" class="member-blog">없음</li>
       </ul>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>
@@ -45,6 +45,14 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Noto+Sans+KR&display=swap");
 
+.member-list-wrap {
+  display: flex;
+  margin: 0 200px;
+  align-items: center;
+  background: transparent;
+  flex-wrap: wrap;
+}
+
 .member-card {
   margin: 50px auto;
   display: flex;
@@ -54,6 +62,7 @@ export default {
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
   border-radius: 11px;
+  background-color:rgba(255, 255, 255, 0.9);
 }
 
 .member-photo-wrap {

@@ -1,10 +1,8 @@
 <template>
   <div class="wrap">
     <MemberHeader />
-    <div class="member-list-wrap">
       <MemberCard
       v-bind:memberData="memberData"/>
-    </div>
   </div>
 </template>
 
@@ -34,6 +32,48 @@ export default {
           phone: "010-1111-0000",
           blog: "https://github.com/Bangseungjae",
         },
+        {
+          name: "방승재",
+          github: "https://github.com/Bangseungjae",
+          email: "tmdwo5825@naver.com",
+          phone: "010-1111-0000",
+          blog: "https://github.com/Bangseungjae",
+        },
+        {
+          name: "방승재",
+          github: "https://github.com/Bangseungjae",
+          email: "tmdwo5825@naver.com",
+          phone: "010-1111-0000",
+          blog: "https://github.com/Bangseungjae",
+        },
+        {
+          name: "방승재",
+          github: "https://github.com/Bangseungjae",
+          email: "tmdwo5825@naver.com",
+          phone: "010-1111-0000",
+          blog: "https://github.com/Bangseungjae",
+        },
+        {
+          name: "방승재",
+          github: "https://github.com/Bangseungjae",
+          email: "tmdwo5825@naver.com",
+          phone: "010-1111-0000",
+          blog: "https://github.com/Bangseungjae",
+        },
+        {
+          name: "방승재",
+          github: "https://github.com/Bangseungjae",
+          email: "tmdwo5825@naver.com",
+          phone: "010-1111-0000",
+          blog: "https://github.com/Bangseungjae",
+        },
+        {
+          name: "방승재",
+          github: "https://github.com/Bangseungjae",
+          email: "tmdwo5825@naver.com",
+          phone: "010-1111-0000",
+          blog: "https://github.com/Bangseungjae",
+        },
       ],
     };
   },
@@ -47,13 +87,5 @@ export default {
   background-position: center center;
   background-attachment: fixed;
   z-index: -999;
-}
-
-.member-list-wrap {
-  display: flex;
-  margin: auto;
-  justify-content: space-evenly;
-  align-items: center;
-  background: transparent;
 }
 </style>
