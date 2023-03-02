@@ -28,14 +28,14 @@ export default {};
 .title {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 800;
-  font-size: 35px;
+  font-size: 40px;
   color: #2493bf;
   text-shadow: -1px 0 #343434, 0 1px #343434, 1px 0 #343434, 0 -1px #343434;
 }
 
 .rectangle {
   margin: 8px auto;
-  width: 170px;
+  width: 200px;
   height: 5px;
   border-radius: 15px;
   border: 1px solid #343434;
