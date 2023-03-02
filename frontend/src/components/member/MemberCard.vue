@@ -32,7 +32,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Noto+Sans+KR&display=swap');
 
 .member-card {
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
   flex-direction: row;
   width: 450px;
