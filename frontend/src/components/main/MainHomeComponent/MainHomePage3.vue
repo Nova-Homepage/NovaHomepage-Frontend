@@ -4,16 +4,10 @@
 
 <script>
 export default {
-    componets: {
-    },
-    data() {
-      return {
-      };
-    },
-    compueted: {
-    },
-    methods: {
-  }
+    componets: {},
+    data() { return {};},
+    compueted: {},
+    methods: {}
 }
 </script>
 
