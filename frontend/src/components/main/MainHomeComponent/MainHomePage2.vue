@@ -42,7 +42,7 @@ export default {
 .HomePage2_body{
   position: relative;
   width: 1440px;
-  height: 1000px;
+  height: 700px;
   display: flex;
 }
 .HomePage2_body hr{
