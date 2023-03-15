@@ -82,10 +82,10 @@ export default {
     margin-top: 10px;
     font-family: "Noto Sans KR", sans-serif;
     min-height: 8vh;
-    font-size: 10px;
+    font-size: 14px;
   }
   .nav__logo {
-    width: 10%;
+    width: 14%;
     font-family: "Rubik Mono One", sans-serif;
     font-weight: 800;
     font-size: 2.1em;
@@ -100,7 +100,7 @@ export default {
     display: none;
   }
   .nav__wrap{
-    width:70%;
+    width:66%;
     display:flex;
     align-items: center;
   }
@@ -113,8 +113,8 @@ export default {
   .nav__menu .disableLink {
     font-size: 1.3em;
     color: #3c3c3c;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 1%;
+    margin-left: 1%;
     font-weight: 500;
   }
   
