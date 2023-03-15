@@ -1,8 +1,8 @@
 <template>
-  <body>
     <nav class="nav">
-      <router-link to="/home"><div class="nav__logo">NOVA</div></router-link>
-
+      <div class="nav__logo"><router-link to="/home" class="disableLink">NOVA</router-link></div>
+      <input type="checkbox" id="expand-menu" name="expand-menu">
+      <div class="nav__wrap">
       <div class="nav__menu">
         <router-link to="/Documents" class="disableLink">Documents</router-link>
         <router-link to="/Members" class="disableLink"> Members</router-link>
@@ -21,9 +21,9 @@
           <router-link to="/MyPage">{{ username }} 회원님</router-link>
         </div>
       </div>
+      </div>
     </nav>
     <hr />
-  </body>
 </template>
 
 <script>
@@ -43,44 +43,168 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
+@media screen and (max-width:768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+    min-height: 8vh;
+    font-size: 3vw;
+  }
+  .nav__logo {
+    font-family: "Rubik Mono One", sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    line-height: 20px;
+    color: #252525;
+    vertical-align: middle;
+  }
+  .nav__logo .disableLink{
+    color: #252525;
+  }
+  .nav__wrap{
+    display:none;
+  }
+  #expand-menu:checked ~ .nav__wrap{
+    display:block;
+    height:auto
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1280px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+    min-height: 8vh;
+    font-size: 10px;
+  }
+  .nav__logo {
+    width: 10%;
+    font-family: "Rubik Mono One", sans-serif;
+    font-weight: 800;
+    font-size: 2.1em;
+    line-height: 20px;
+    color: #252525;
+    vertical-align: middle;
+  }
+  .nav__logo .disableLink{
+    color: #252525;
+  }
+  #expand-menu{
+    display: none;
+  }
+  .nav__wrap{
+    width:70%;
+    display:flex;
+    align-items: center;
+  }
+  .nav__menu {
+    width: 78.6%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav__menu .disableLink {
+    font-size: 1.3em;
+    color: #3c3c3c;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-weight: 500;
+  }
+  
+  .nav__sign {
+    width: 21.4%;
+  }
+  
+  .nav__github_signin {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .nav__user {
+    width: 100px;
+    height: 25px;
+    border: 2px solid #1b57a6;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+  }
+  
+  .nav__user a {
+    color: #1b57a6;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+  }
+  
+  .nav__github_signin img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:1281px) {
 .nav {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 10px;
   font-family: "Noto Sans KR", sans-serif;
   min-height: 8vh;
+  font-size: 16px;
 }
 
 .nav__logo {
   width: 10%;
-  margin-left: 10px;
   font-family: "Rubik Mono One", sans-serif;
   font-weight: 800;
-  font-size: 35px;
+  font-size: 2.1em;
   line-height: 20px;
   color: #252525;
   vertical-align: middle;
 }
+.nav__logo .disableLink{
+  color: #252525;
+}
 
 .nav__menu {
-  width: 60%;
-  margin-left: 120px;
+  width: 78.6%;
   display: flex;
   justify-content: space-between;
 }
+  #expand-menu{
+    display: none;
+  }
+.nav__wrap{
+  width:70%;
+  display:flex;
+  align-items: center;
+}
 
-.disableLink {
-  font-size: 18px;
+.nav__menu .disableLink {
+  font-size: 1.3em;
   color: #3c3c3c;
-  padding: 25px;
-  padding-right: 50px;
-  padding-left: 50px;
+  margin-right: 5%;
+  margin-left: 5%;
   font-weight: 500;
 }
 
 .nav__sign {
-  width: 30%;
-  margin-left: 100px;
+  width: 21.4%;
 }
 
 .nav__github_signin {
@@ -93,7 +217,6 @@ export default {
   outline: 0;
   background: transparent;
   cursor: pointer;
-  margin-left: 150px;
 }
 
 .nav__user {
@@ -104,17 +227,18 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 100px;
+  float: right;
 }
 
 .nav__user a {
   color: #1b57a6;
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }
 
 .nav__github_signin img {
   width: 100%;
+}
 }
 </style>

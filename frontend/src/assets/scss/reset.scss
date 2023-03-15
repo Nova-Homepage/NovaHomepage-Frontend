@@ -134,11 +134,15 @@ BDO[DIR="rtl"] {
     page-break-before: avoid;
   }
 }
-hr{
+@media screen and (max-width:768px) {
+ 
+}
+@media screen and (min-width:769px){
+  hr{
   position : relative;
-  width: 1200px;
   border: 2px solid #BBBBBB;
   border-radius : 2px;
   text-align: left;
-  margin-left: 150px;
-}
+  margin-left: 10%;
+  margin-right: 10%;
+}}
