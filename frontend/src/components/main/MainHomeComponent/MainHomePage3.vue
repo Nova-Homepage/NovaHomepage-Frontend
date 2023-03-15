@@ -26,17 +26,18 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik+Mono+One&display=swap");
 
+@media screen and (min-width:1280px) {.HomePage3_body{width: 1280px;height: 750px;} }
+@media screen and (max-width:1279px) {.HomePage3_body{width: 768px;height: 450px;} }
 .HomePage3_body{
-  width: 1440px;
-  height: 1000px;
-}
-
+  position: relative;
+  margin: 0 auto;
+ }
 .book {
   transform-style: preserve-3d;
   position: relative;
-  left: 500px;
-  height: 450px;
-  width: 600px;
+  left: 47%;
+  height: 90%;
+  width: 45%;
   cursor: pointer;
   backface-visibility: visible;
 }
@@ -44,8 +45,8 @@ export default {
 .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
   transform-style: preserve-3d;
   position: absolute;
-  width: 450px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   top: 0; left: 0;
   transform-origin: left center;
   transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;

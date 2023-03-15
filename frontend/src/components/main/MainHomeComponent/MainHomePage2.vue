@@ -38,10 +38,11 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Rubik+Mono+One&display=swap");
-
+@media screen and (min-width:1280px) {
 .HomePage2_body{
   position: relative;
-  width: 1440px;
+  margin: 0 auto;
+  width: 1280px;
   height: 700px;
   display: flex;
 }
@@ -50,10 +51,12 @@ export default {
   border: 10px solid #252525;
   width: 0px;
   height: 450px;
-  left: 100px;
+  left: 0px;
   top: 100px;
 }
 .HomePage2_text{
+  position: relative;
+  left: -100px;
   width:500px;
 }
 .HomePage2_text h1{
@@ -115,4 +118,78 @@ export default {
   height: 175px;
   margin: auto;
 }
+}
+@media screen and (max-width:1279px) {
+  .HomePage2_body{
+    position: relative;
+    margin: 0 auto;
+    width: 768px;
+    height: 1000px;
+  }
+  .HomePage2_body hr{ display: none; }
+  .HomePage2_text{
+    position: relative;
+    left: 0px;
+    width:500px;
+  }
+  .HomePage2_text h1{
+    position: relative;
+    top: 50px;
+    left: 100px;
+    width: 170px;
+    height: 120px;
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 60px;
+  
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #252525;
+  }
+  .HomePage2_text span{
+    position: relative;
+    width: 420px;
+    height: 0px;
+    left: 100px;
+    top: 200px;
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #252525;
+    white-space: pre-wrap;
+  }
+  .Home_icons_wrap{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    top: 350px;
+    left: 125px;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .Home_icons{
+    text-align: center;
+    width: 250px;
+    height: 250px;
+  }
+  .Home_icons img{
+    display: block;
+    width: 175px;
+    height: 175px;
+    margin: auto;
+  }
+  }
 </style>
